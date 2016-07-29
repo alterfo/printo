@@ -1,0 +1,107 @@
+@import './variables.scss';
+@import './grid.scss';
+
+body {
+    width: 1260px;
+}
+
+.tsd-container {
+    margin: 0 auto;
+    min-width: 1260px;
+}
+
+.tsd-container-left {
+    width: 560px;
+    float: left;
+}
+
+.tsd-container-right {
+    width: 760px;
+    float: right;
+}
+
+.tsd-step-menu__button {
+  height: 44px;
+  padding: 3px 16px;
+  float: left;
+  vertical-align: middle;
+  line-height: 50px;
+  color: white;
+  font-size: initial;
+  font-weight: 500;
+  cursor: pointer;
+
+  &.selected {
+    background: white;
+    cursor: default;
+    color: $menu-blue;
+    //font-weight: bold;
+    height: 48px;
+    line-height: 48px;
+  }
+}
+
+.tsd-step-menu {
+  height: 50px;
+  background: $menu-blue;
+  width: 100%;
+  padding: 2px;
+  text-align: center;
+}
+
+.tsd-sex {
+  height: 50px;
+  width: 100%;
+}
+
+.tsd-sex-btn {
+  height: 55px;
+  display: inline-block;
+  background-color: #FFFFFF;
+  vertical-align: middle;
+  line-height: 55px;
+  font-size: medium;
+  cursor: pointer;
+
+  .tsd-sex__text {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .tsd-panel__button-icon-box {
+    width: 40px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    &--men {
+      background: url(../i/tsd-men-icon.png) center center no-repeat;
+    }
+    &--women {
+      background: url(../i/tsd-women-icon.png) center center no-repeat;
+    }
+    &--children {
+      background: url(../i/tsd-children-icon.png) center center no-repeat;
+    }
+  }
+
+  &.selected {
+    .tsd-panel__button-icon-box {
+      &--men {
+        background: url(../i/tsd-men-icon--active.png) center center no-repeat;
+      }
+      &--women {
+        background: url(../i/tsd-women-icon--active.png) center center no-repeat;
+      }
+      &--children {
+        background: url(../i/tsd-children-icon--active.png) center center no-repeat;
+      }
+    }
+  }
+
+}
+
+.tsd-hr {
+  height: 1px;
+  border: 0;
+  background: rgba(0, 0, 0, 0.21);
+}

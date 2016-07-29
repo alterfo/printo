@@ -1,0 +1,50 @@
+.tsd-step-block(data-step='1')
+    include ./sex-chooser.jade
+
+    .tsd-type
+        .tsd-type-btn.selected(data-type='tshirt', data-key='0', data-price='1 490 руб', data-word='футболки', data-product='21040', data-type-pr='1')
+            .tsd-panel__button-icon-box
+                img.tsd-panel__button-icon(src='/images/themes/default/icon-tshirt.jpg')
+            | Футболка
+        .tsd-type-btn(data-type='svitshot', data-key='1', data-price='2 390 руб', data-word='свитшота', data-product='21041', data-type-pr='3')
+            .tsd-panel__button-icon-box
+                img.tsd-panel__button-icon(src='/images/themes/default/icon-svitshot.jpg')
+            | Свитшот
+        .tsd-type-btn(data-type='mike', data-key='2', data-price='1 490 руб', data-word='майки', data-product='30711', data-type-pr='6')
+            .tsd-panel__button-icon-box
+                img.tsd-panel__button-icon(src='/images/themes/default/icon-mike.jpg')
+            | Майка
+        .tsd-type-btn(data-type='top', data-key='3', data-price='1 490 руб', data-word='борцовки', data-product='30712', data-type-pr='7')
+            .tsd-panel__button-icon-box
+                img.tsd-panel__button-icon(src='/images/themes/default/icon-top.jpg')
+            | Борцовка
+        .tsd-type-btn(data-type='hoodie', data-key='4', data-price='2 890 руб', data-word='худи', data-product='30713', data-type-pr='8')
+            .tsd-panel__button-icon-box
+                img.tsd-panel__button-icon(src='/images/themes/default/icon-hoodie.jpg')
+            | Худи
+    .additional-info
+        .tooltips.text-product(style='\
+            height: 250px;\
+            ')
+            .b-information__title Информация о товаре
+            img.textImg(src='/images/themes/default/text/fut_man.jpg', alt='')
+            .text-block(style='\
+              float: right;\
+              ')
+                b ТКАНЬ МИКРОФИБРА
+                |  – трикотажное полотно, позволяющее коже дышать и поддерживать комфортный микроклимат.
+                i.ico.ico_info
+                span.tooltip-inner
+                    | Микрофибра – это текстильный материал двадцать первого века, способный кардинально перевернуть традиционные представления об одежде. Благодаря химической и световой устойчивости, футболка из экологически чистого сверхтонкого микроволокна крайне практична, а также обладает высокими потребительскими свойствами. Микрофибра – дышащая ткань. Воздухопроницаемость обеспечивается малым сечением нити. Из-за особых свойств микрофибры одежда из нее всесезонна: летом она не впитывает влагу, а зимой отлично сохраняет тепло. Структура волокна делает ткань приятной для тела. Вещи из микрофибры дают возможность чувствовать себя очень свободно и естественно.
+            .text-block(style='\
+              float: right;\
+              ')
+                b НЕ ВЫСТИРЫВАЕТСЯ
+                |  – изделие с ярким и насыщенным изображением выдерживает неограниченное количество стирок.
+                i.ico.ico_info
+                span.tooltip-inner
+                    | Изображение нанесенное методом сублимации очень стойкое к стирке и воздействию солнечных лучей. Стирать такой материал можно любым моющим средством для стирки тканей при температуре воды до 60 градусов.
+    .tsd-step-change
+        .tsd-step-change-next
+            | Далее
+            i.ico.ico_btn
