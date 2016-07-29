@@ -1,0 +1,74 @@
+body {
+    width: 1260px;
+}
+
+.tsd-container {
+    margin: 0 auto;
+    width: 1260px;
+}
+
+.tsd-container-left {
+    width: 560px;
+    float: left;
+}
+
+.tsd-container-right {
+    width: 760px;
+    float: right;
+}
+
+.tsd-step-menu__button {
+    height: 44px;
+    padding: 3px 16px;
+    float: left;
+    vertical-align: middle;
+    line-height: 50px;
+    color: white;
+    font-size: initial;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 2px;
+}
+
+.tsd-step-menu {
+    height: 50px;
+    background: #14c2ca;
+    width: 100%;
+}
+
+.tsd-sex {
+        height: 95px;
+    background-color: #F7F7F7;
+    padding-left: 15px;
+}
+
+.tsd-sex-btn {
+    width: 136px;
+    height: 40px;
+    box-shadow: inset 0px 0px 0px 1px #D3D3D3;
+    margin-top: 24px;
+    margin-left: 16px;
+    float: left;
+    background-color: #FFFFFF;
+    vertical-align: middle;
+    line-height: 40px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.tsd-step-menu__button.selected {
+    background: white;
+    cursor: default;
+    color: #14c2ca;
+    font-weight: bold;
+    height: 42px;
+    margin-top: 2px;
+    line-height: 48px;
+}
+
+.tsd-panel__button-icon-box {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    float: left;
+}

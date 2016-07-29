@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Printo</title>
+    <link rel="stylesheet" href="css/vendor/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="tsd-container">
+        <div class="tsd-container-left">
+            <canvas height="300" width="500" id="tshirt"></canvas>
+        </div>
+        <div class="tsd-container-right">
+            <div class="tsd-step-menu">
+                <div class="tsd-step-menu__button selected" data-step="1">
+                    1. Изделие
+                </div>
+                <div class="tsd-step-menu__button" data-step="2">
+                    2. Изображение
+                </div>
+                <div class="tsd-step-menu__button" data-step="3">
+                    3. Надпись
+                </div>
+                <div class="tsd-step-menu__button" data-step="4">
+                    4. Результат
+                </div>
+            </div>
+            <div class="tsd-step-block" data-step="1">
+                <div class="tsd-sex">
+                    <div class="tsd-sex-btn selected" data-type="man" data-tsd-sex="2">
+                        <div class="tsd-panel__button-icon-box">
+                            <img src="/images/themes/default/icon-man.jpg" class="tsd-panel__button-icon"></div>Мужчины</div>
+                    <div class="tsd-sex-btn" data-type="woman" data-key="1" data-tsd-sex="1">
+                        <div class="tsd-panel__button-icon-box"><img src="/images/themes/default/icon-woman.jpg" class="tsd-panel__button-icon"></div>Женщины</div>
+                    <div class="tsd-sex-btn" data-type="boy" data-key="2" data-tsd-sex="2">
+                        <div class="tsd-panel__button-icon-box"><img src="/images/themes/default/icon-boy.jpg" class="tsd-panel__button-icon"></div>Дети</div>
+                </div>
+                <div class="tsd-type">
+                    <div class="tsd-type-btn selected" data-type="tshirt" data-key="0" data-price="1 490 руб" data-word="футболки" data-product="21040" data-type-pr="1">
+                        <div class="tsd-panel__button-icon-box"><img src="/images/themes/default/icon-tshirt.jpg" class="tsd-panel__button-icon"></div>Футболка</div>
+                    <div class="tsd-type-btn" data-type="svitshot" data-key="1" data-price="2 390 руб" data-word="свитшота" data-product="21041" data-type-pr="3">
+                        <div class="tsd-panel__button-icon-box"><img src="/images/themes/default/icon-svitshot.jpg" class="tsd-panel__button-icon"></div>Свитшот</div>
+                    <div class="tsd-type-btn" data-type="mike" data-key="2" data-price="1 490 руб" data-word="майки" data-product="30711" data-type-pr="6">
+                        <div class="tsd-panel__button-icon-box"><img src="/images/themes/default/icon-mike.jpg" class="tsd-panel__button-icon"></div>Майка</div>
+                    <div class="tsd-type-btn" data-type="top" data-key="3" data-price="1 490 руб" data-word="борцовки" data-product="30712" data-type-pr="7">
+                        <div class="tsd-panel__button-icon-box"><img src="/images/themes/default/icon-top.jpg" class="tsd-panel__button-icon"></div>Борцовка</div>
+                    <div class="tsd-type-btn" data-type="hoodie" data-key="4" data-price="2 890 руб" data-word="худи" data-product="30713" data-type-pr="8">
+                        <div class="tsd-panel__button-icon-box"><img src="/images/themes/default/icon-hoodie.jpg" class="tsd-panel__button-icon"></div>Худи</div>
+                </div>
+                <div class="additional-info">
+                    <div class="tooltips text-product" style="
+				height: 250px;
+			">
+                        <div class="b-information__title">Информация о товаре</div><img class="textImg" src="/images/themes/default/text/fut_man.jpg" alt="">
+                        <div class="text-block" style="
+				float: right;
+			"><b>ТКАНЬ МИКРОФИБРА</b> – трикотажное полотно, позволяющее коже дышать и поддерживать комфортный микроклимат.
+                            <i class="ico ico_info"></i>
+                            <span class="tooltip-inner">Микрофибра – это текстильный материал двадцать первого века, способный кардинально перевернуть традиционные представления об одежде. Благодаря химической и световой устойчивости, футболка из экологически чистого сверхтонкого микроволокна крайне практична, а также обладает высокими потребительскими свойствами. Микрофибра – дышащая ткань. Воздухопроницаемость обеспечивается малым сечением нити. Из-за особых свойств микрофибры одежда из нее всесезонна: летом она не впитывает влагу, а зимой отлично сохраняет тепло. Структура волокна делает ткань приятной для тела. Вещи из микрофибры дают возможность чувствовать себя очень свободно и естественно.</span></div>
+                        <div class="text-block" style="
+				float: right;
+			">
+                            <b>НЕ ВЫСТИРЫВАЕТСЯ</b> – изделие с ярким и насыщенным изображением выдерживает неограниченное количество стирок.
+                            <i class="ico ico_info"></i>
+                            <span class="tooltip-inner">Изображение нанесенное методом сублимации очень стойкое к стирке и воздействию солнечных лучей. Стирать такой материал можно любым моющим средством для стирки тканей при температуре воды до 60 градусов.</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tsd-step-change">
+                    <div class="tsd-step-change-next">Далее<i class="ico ico_btn"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/step-menu.js"></script>
+
+</body>
+
+</html>
