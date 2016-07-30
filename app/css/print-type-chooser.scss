@@ -1,0 +1,40 @@
+.tsd-print-type {
+  height: 300px;
+  cursor: pointer;
+
+  .tsd-print-type__block {
+
+    .tsd-print-type__image {
+      display: block;
+      height: 178px;
+      &--sublimation {
+        background: url(../i/tsd-sublimination.png) center center no-repeat;
+      }
+      &--printa2 {
+        background: url(../i/tsd-printa2.png) center center no-repeat;
+      }
+      &--thermal {
+        background: url(../i/tsd-thermal.png) center center no-repeat;
+      }
+    }
+
+    &.selected {
+      color: $menu-blue;
+      cursor: default;
+
+      .tsd-print-type__image {
+        &--sublimation {
+          background: url(../i/tsd-sublimination--active.png) center center no-repeat;
+        }
+        &--printa2 {
+          background: url(../i/tsd-printa2--active.png) center center no-repeat;
+        }
+        &--thermal {
+          background: url(../i/tsd-thermal--active.png) center center no-repeat;
+        }
+      }
+    }
+  }
+}
+
+

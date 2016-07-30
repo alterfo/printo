@@ -1,0 +1,60 @@
+.tsd-type {
+  height: 50px;
+  width: 100%;
+}
+
+.tsd-type-btn {
+  height: 55px;
+  display: inline-block;
+  background-color: #FFFFFF;
+  vertical-align: middle;
+  line-height: 55px;
+  font-size: medium;
+  cursor: pointer;
+
+  .tsd-type__text {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .tsd-panel__button-icon-box {
+    width: 40px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    &--tshirt {
+      background: url(../i/t-shirt-icon.png) center center no-repeat;
+    }
+    &--singlet {
+      background: url(../i/singlet-icon.png) center center no-repeat;
+    }
+    &--svitshot {
+      background: url(../i/svitshot-icon.png) center center no-repeat;
+    }
+    &--kenguruha {
+      background: url(../i/kenguruha-icon.png) center center no-repeat;
+    }
+
+  }
+
+  &.selected {
+    color: $menu-blue;
+    cursor: default;
+    .tsd-panel__button-icon-box {
+      &--tshirt {
+        background: url(../i/t-shirt-icon--active.png) center center no-repeat;
+      }
+      &--singlet {
+        background: url(../i/singlet-icon--active.png) center center no-repeat;
+      }
+      &--svitshot {
+        background: url(../i/svitshot-icon--active.png) center center no-repeat;
+      }
+      &--kenguruha {
+        background: url(../i/kenguruha-icon--active.png) center center no-repeat;
+      }
+    }
+  }
+
+}

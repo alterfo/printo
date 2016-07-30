@@ -1,0 +1,28 @@
+.tsd-step-menu__button {
+  height: 44px;
+  padding: 3px 16px;
+  float: left;
+  vertical-align: middle;
+  line-height: 50px;
+  color: white;
+  font-size: initial;
+  font-weight: 500;
+  cursor: pointer;
+
+  &.selected {
+    background: white;
+    cursor: default;
+    color: $menu-blue;
+    //font-weight: bold;
+    height: 48px;
+    line-height: 48px;
+  }
+}
+
+.tsd-step-menu {
+  height: 50px;
+  background: $menu-blue;
+  width: 100%;
+  padding: 2px;
+  text-align: center;
+}
