@@ -1,0 +1,25 @@
+.tsd-buttons {
+  .tsd-btn {
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    color: #FFFFFF;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: $menu-blue;
+    text-align: center;
+    line-height: 40px;
+
+    &__next {
+      float: right;
+    }
+    &__back {
+      float: left;
+    }
+
+    &--disabled {
+      background-color: $gray;
+    }
+  }
+
+}

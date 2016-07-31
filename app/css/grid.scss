@@ -52,3 +52,10 @@ $pad: 5px;
 .tsd-text-center {
   text-align: center;
 }
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}

@@ -256,6 +256,12 @@ th {
 .tsd-text-center {
   text-align: center; }
 
+/* line 56, /Users/oleg/Sites/printo/printo/app/css/grid.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 /* line 1, /Users/oleg/Sites/printo/printo/app/css/step-menu.scss */
 .tsd-step-menu__button {
   height: 44px;
@@ -387,55 +393,77 @@ th {
 
 /* line 1, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
 .tsd-print-type {
-  height: 300px;
+  height: 336px;
   cursor: pointer; }
   /* line 7, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
   .tsd-print-type .tsd-print-type__block .tsd-print-type__image {
     display: block;
-    height: 178px; }
-    /* line 10, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
+    height: 178px;
+    margin: 10px 0; }
+    /* line 11, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
     .tsd-print-type .tsd-print-type__block .tsd-print-type__image--sublimation {
       background: url(../i/tsd-sublimination.png) center center no-repeat; }
-    /* line 13, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
+    /* line 14, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
     .tsd-print-type .tsd-print-type__block .tsd-print-type__image--printa2 {
       background: url(../i/tsd-printa2.png) center center no-repeat; }
-    /* line 16, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
+    /* line 17, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
     .tsd-print-type .tsd-print-type__block .tsd-print-type__image--thermal {
       background: url(../i/tsd-thermal.png) center center no-repeat; }
-  /* line 21, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
+  /* line 22, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
   .tsd-print-type .tsd-print-type__block.selected {
     color: #14c3c9;
     cursor: default; }
-    /* line 26, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
+    /* line 27, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
     .tsd-print-type .tsd-print-type__block.selected .tsd-print-type__image--sublimation {
       background: url(../i/tsd-sublimination--active.png) center center no-repeat; }
-    /* line 29, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
+    /* line 30, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
     .tsd-print-type .tsd-print-type__block.selected .tsd-print-type__image--printa2 {
       background: url(../i/tsd-printa2--active.png) center center no-repeat; }
-    /* line 32, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
+    /* line 33, /Users/oleg/Sites/printo/printo/app/css/print-type-chooser.scss */
     .tsd-print-type .tsd-print-type__block.selected .tsd-print-type__image--thermal {
       background: url(../i/tsd-thermal--active.png) center center no-repeat; }
 
-/* line 10, /Users/oleg/Sites/printo/printo/app/css/main.scss */
+/* line 2, /Users/oleg/Sites/printo/printo/app/css/buttons.scss */
+.tsd-buttons .tsd-btn {
+  width: 100px;
+  height: 40px;
+  margin-top: 20px;
+  color: #FFFFFF;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #14c3c9;
+  text-align: center;
+  line-height: 40px; }
+  /* line 13, /Users/oleg/Sites/printo/printo/app/css/buttons.scss */
+  .tsd-buttons .tsd-btn__next {
+    float: right; }
+  /* line 16, /Users/oleg/Sites/printo/printo/app/css/buttons.scss */
+  .tsd-buttons .tsd-btn__back {
+    float: left; }
+  /* line 20, /Users/oleg/Sites/printo/printo/app/css/buttons.scss */
+  .tsd-buttons .tsd-btn--disabled {
+    background-color: #bbbcbe; }
+
+/* line 11, /Users/oleg/Sites/printo/printo/app/css/main.scss */
 body {
   width: 1260px; }
 
-/* line 14, /Users/oleg/Sites/printo/printo/app/css/main.scss */
+/* line 15, /Users/oleg/Sites/printo/printo/app/css/main.scss */
 .tsd-container {
   margin: 0 auto;
   min-width: 1260px; }
 
-/* line 19, /Users/oleg/Sites/printo/printo/app/css/main.scss */
+/* line 20, /Users/oleg/Sites/printo/printo/app/css/main.scss */
 .tsd-container-left {
   width: 560px;
   float: left; }
 
-/* line 24, /Users/oleg/Sites/printo/printo/app/css/main.scss */
+/* line 25, /Users/oleg/Sites/printo/printo/app/css/main.scss */
 .tsd-container-right {
   width: 760px;
   float: right; }
 
-/* line 29, /Users/oleg/Sites/printo/printo/app/css/main.scss */
+/* line 30, /Users/oleg/Sites/printo/printo/app/css/main.scss */
 .tsd-hr {
   height: 1px;
   border: 0;
