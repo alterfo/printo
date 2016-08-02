@@ -1,12 +1,12 @@
 .tsd-sex.tsd-grid
-    .tsd-sex-btn.selected.tsd-col-1-3.tsd-text-left(data-tsd-sex='men')
+    .tsd-sex-btn.selected.tsd-col-1-3.tsd-text-left(ng-click="vm.setSex('men')", ng-class="{'selected': vm.itemParams.sex === 'men'}")
         .tsd-panel__button-icon-box.tsd-panel__button-icon-box--men
         span.tsd-sex__text Мужчины
 
-    .tsd-sex-btn.tsd-col-1-3.tsd-text-center(data-tsd-sex='women')
+    .tsd-sex-btn.tsd-col-1-3.tsd-text-center(ng-click="vm.setSex('women')", ng-class="{'selected': vm.itemParams.sex === 'women'}")
         .tsd-panel__button-icon-box.tsd-panel__button-icon-box--women
         span.tsd-sex__text Женщины
 
-    .tsd-sex-btn.tsd-col-1-3.tsd-text-right(data-tsd-sex='children')
+    .tsd-sex-btn.tsd-col-1-3.tsd-text-right(ng-click="vm.setSex('children')", ng-class="{'selected': vm.itemParams.sex === 'children'}")
         .tsd-panel__button-icon-box.tsd-panel__button-icon-box--children
         span.tsd-sex__text Дети

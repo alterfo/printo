@@ -1,15 +1,7 @@
-.tsd-step-block(data-step='2').tsd-hidden
-    .tsd-image__tabs-menu
-        .tsd-image__tabs.tsd-image__tabs--frontside.tsd-col-1-2.tsd-text-left.selected(data-image-tab='frontside')
-            | Лицевая сторона
-        .tsd-image__tabs.tsd-image__tabs--backside.tsd-col-1-2.tsd-text-right(data-image-tab='backside')
-            | Спинка
+.tsd-step-block(ng-show="vm.currentTab === 2")
     .tsd-image__tabcontent.tsd-image__tabcontent--frontside(data-image-tab="frontside")
         - var tab = 'frontside'
         include image-tabcontent
     .tsd-image__tabcontent.tsd-image__tabcontent--backside(data-image-tab="backside").tsd-hidden
         - var tab = 'backside'
         include image-tabcontent
-
-
-//todo: переключение между вкладками

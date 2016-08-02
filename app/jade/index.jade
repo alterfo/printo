@@ -2,10 +2,10 @@ extends layout
 block title
     title Style title
 block content
-    .tsd-container
-        .tsd-container-left
+    .tsd-container(ng-app="printo-app")
+        .tsd-container-left()
             include ./partials/canvas
-        .tsd-container-right
+        .tsd-container-right(ng-controller="FormCtrl as vm")
             include ./partials/step-menu
             include ./partials/step1__product
             include ./partials/step2__image

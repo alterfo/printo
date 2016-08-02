@@ -19,11 +19,15 @@ body {
 }
 
 .tsd-container-left {
-    width: 560px;
-    float: left;
+  margin: 20px 0;
+  width: 450px;
+  height: 800px;
+  float: left;
+  border: 1px solid gray;
 }
 
 .tsd-container-right {
+    margin: 20px 0;
     width: 760px;
     float: right;
 }

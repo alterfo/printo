@@ -1,5 +1,5 @@
 .tsd-buttons.tsd-grid
     .tsd-col-1-2.tsd-text-left
-        .tsd-btn.tsd-btn__back.tsd-btn--disabled Назад
+        .tsd-btn.tsd-btn__back(ng-disabled="vm.isActiveTab(1)", ng-class="{'tsd-btn--disabled':vm.isActiveTab(1)}", ng-click="vm.changeTab(vm.currentTab-1)") Назад
     .tsd-col-1-2.tsd-text-right
-        .tsd-btn.tsd-btn__next Вперед
+        .tsd-btn.tsd-btn__next(ng-disabled="vm.isActiveTab(4)", ng-class="{'tsd-btn--disabled':vm.isActiveTab(4)}", ng-click="vm.changeTab(vm.currentTab+1)") Вперед

@@ -1,9 +1,6 @@
 .tsd-step-menu
-    .tsd-step-menu__button.tsd-col-1-4.selected(data-step='1')
-        | 1. Изделие
-    .tsd-step-menu__button.tsd-col-1-4(data-step='2')
-        | 2. Изображение
-    .tsd-step-menu__button.tsd-col-1-4(data-step='3')
-        | 3. Надпись
-    .tsd-step-menu__button.tsd-col-1-4(data-step='4')
-        | 4. Результат
+    .tsd-step-menu__button.tsd-col-1-4(
+        ng-repeat="tab in vm.tabs",
+        ng-class="{'selected':vm.isActiveTab(tab.id)}"
+        ng-click="vm.changeTab(tab.id)"
+    ) {{tab.name}}

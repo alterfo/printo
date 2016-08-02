@@ -1,13 +1,13 @@
 .tsd-type.tsd-grid
-    .tsd-type-btn.selected(data-type='tshirt').tsd-col-1-4.tsd-text-left
+    .tsd-type-btn.tsd-col-1-4.tsd-text-left(ng-click="vm.setProductType('tshirt')", ng-class="{'selected': vm.itemParams.product_type === 'tshirt'}")
         .tsd-panel__button-icon-box.tsd-panel__button-icon-box--tshirt
         | Футболка
-    .tsd-type-btn(data-type='singlet').tsd-col-1-4.tsd-text-center
+    .tsd-type-btn.tsd-col-1-4.tsd-text-center(ng-click="vm.setProductType('singlet')", ng-class="{'selected': vm.itemParams.product_type === 'singlet'}")
         .tsd-panel__button-icon-box.tsd-panel__button-icon-box--singlet
         | Майка
-    .tsd-type-btn(data-type='svitshot').tsd-col-1-4.tsd-text-center
+    .tsd-type-btn.tsd-col-1-4.tsd-text-center(ng-click="vm.setProductType('svitshot')", ng-class="{'selected': vm.itemParams.product_type === 'svitshot'}")
         .tsd-panel__button-icon-box.tsd-panel__button-icon-box--svitshot
         | Свитшот
-    .tsd-type-btn(data-type='kenguruha').tsd-col-1-4.tsd-text-right
+    .tsd-type-btn.tsd-col-1-4.tsd-text-right(ng-click="vm.setProductType('kenguruha')", ng-class="{'selected': vm.itemParams.product_type === 'kenguruha'}")
         .tsd-panel__button-icon-box.tsd-panel__button-icon-box--kenguruha
         | Кенгуруха
