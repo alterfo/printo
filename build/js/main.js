@@ -20,6 +20,55 @@ $('.tsd-btn__next').click(function() {
   return false;
 });
 
+var applyImage;
+
+$('.tsd-image__tabs').click(function() {
+  var current_image_tab, next_image_tab;
+  if ($(this).hasClass('selected')) {
+    return false;
+  }
+  current_image_tab = $('.tsd-image__tabs.selected').attr('data-image-tab');
+  next_image_tab = $(this).attr('data-image-tab');
+  $('.tsd-image__tabcontent').addClass('tsd-hidden');
+  $('.tsd-image__tabcontent[data-image-tab="' + next_image_tab + '"]').removeClass('tsd-hidden');
+  $('.tsd-image__tabs').removeClass('selected');
+  return $('.tsd-image__tabs[data-image-tab="' + next_image_tab + '"]').addClass('selected');
+});
+
+$('.tsd-color-chooser__predefined-color-list-item').click(function() {
+  var color, current_side;
+  if ($(this).hasClass('selected')) {
+    return false;
+  }
+  color = $(this).attr('data-tsd-color');
+  current_side = $(this).closest('.tsd-color-chooser').attr('data-image-tabcontent');
+  $('[data-image-tabcontent="' + current_side + '"] .tsd-color-chooser__predefined-color-list-item').removeClass('selected');
+  return $(this).addClass('selected');
+});
+
+applyImage = function(image, side) {
+  var reader;
+  if (image.files && image.files[0]) {
+    reader = new FileReader();
+    return reader.onload = function(e) {
+      setCanvasImage(e.target.result, side);
+      return reader.readAsDataURL(image.files[0]);
+    };
+  }
+};
+
+$('#frontside_image').change(function() {
+  return applyImage(this, 'frontside');
+});
+
+$('#backside_image').change(function() {
+  return applyImage(this, 'backside');
+});
+
+$('.tsd-image-uploader__form-button').click(function() {
+  return $(this).next().find('input').click();
+});
+
 
 
 $('.tsd-print-type__block').click(function() {
@@ -49,8 +98,8 @@ $('.tsd-step-menu__button').click(function() {
   }
   current_step = parseInt($('.tsd-step-menu__button.selected').attr('data-step'));
   nextBlock = parseInt($(this).attr('data-step'));
-  $('.tsd-step-block').hide();
-  $('.tsd-step-block[data-step="' + nextBlock + '"]').show();
+  $('.tsd-step-block').addClass('tsd-hidden');
+  $('.tsd-step-block[data-step="' + nextBlock + '"]').removeClass('tsd-hidden');
   $('.tsd-step-menu__button').removeClass('selected');
   $('.tsd-step-menu__button[data-step="' + nextBlock + '"]').addClass('selected');
   $('.tsd-btn').removeClass('tsd-btn--disabled');

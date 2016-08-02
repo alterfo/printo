@@ -11,8 +11,8 @@ $('.tsd-step-menu__button').click ->
 
   nextBlock = parseInt($(this).attr('data-step'))
 
-  $('.tsd-step-block').hide()
-  $('.tsd-step-block[data-step="' + nextBlock + '"]').show()
+  $('.tsd-step-block').addClass('tsd-hidden')
+  $('.tsd-step-block[data-step="' + nextBlock + '"]').removeClass('tsd-hidden')
   $('.tsd-step-menu__button').removeClass 'selected'
   $('.tsd-step-menu__button[data-step="' + nextBlock + '"]').addClass 'selected'
 

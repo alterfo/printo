@@ -7,6 +7,7 @@
 @import './type-chooser.scss';
 @import './print-type-chooser.scss';
 @import './buttons.scss';
+@import './image-tab';
 
 body {
     width: 1260px;
@@ -30,5 +31,9 @@ body {
 .tsd-hr {
   height: 1px;
   border: 0;
-  background: rgba(0, 0, 0, 0.21);
+  background: $light-gray;
+}
+
+.tsd-hidden {
+  display: none;
 }
