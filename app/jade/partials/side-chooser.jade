@@ -1,0 +1,11 @@
+.tsd-side-chooser__container.tsd-grid
+    .tsd-col-1-2
+        .tsd-side-chooser.tsd-side-chooser__front(
+            ng-click="vm.setSide('frontside')",
+            ng-class="{'selected': vm.currentSide === 'frontside'}")
+            span.tsd-text-center Лицевая сторона
+    .tsd-col-1-2
+        .tsd-side-chooser.tsd-side-chooser__back(
+            ng-click="vm.setSide('backside')",
+            ng-class="{'selected': vm.currentSide === 'backside'}")
+            span.tsd-text-center Оборотная сторона

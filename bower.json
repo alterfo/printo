@@ -21,6 +21,8 @@
     "normalize.sass": "^3.0.0",
     "angular": "^1.5.8",
     "fabric.js": "fabric#^1.6.3",
-    "angular-fabric": "^1.0.0"
+    "angular-fabric": "^1.0.0",
+    "angular-spectrum-colorpicker": "^1.4.5",
+    "angular-spectrum": "^0.0.1"
   }
 }

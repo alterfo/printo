@@ -1,7 +1,5 @@
 .tsd-step-block(ng-show="vm.currentTab === 2")
-    .tsd-image__tabcontent.tsd-image__tabcontent--frontside(data-image-tab="frontside")
-        - var tab = 'frontside'
-        include image-tabcontent
-    .tsd-image__tabcontent.tsd-image__tabcontent--backside(data-image-tab="backside").tsd-hidden
-        - var tab = 'backside'
-        include image-tabcontent
+    .tsd-image__tabcontent.tsd-image__tabcontent--frontside(ng-show="vm.currentSide==='frontside'")
+        include frontside-tabcontent
+    .tsd-image__tabcontent.tsd-image__tabcontent--backside(ng-show="vm.currentSide==='backside'")
+        include backside-tabcontent

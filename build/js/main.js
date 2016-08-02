@@ -2,7 +2,7 @@
 
 
 
-angular.module('printo-app', []).controller('FormCtrl', function() {
+angular.module('printo-app', ['ngSpectrum']).controller('FormCtrl', function() {
   var vm;
   vm = this;
 
@@ -24,7 +24,7 @@ angular.module('printo-app', []).controller('FormCtrl', function() {
       name: "4. Результат"
     }
   ];
-  vm.currentTab = 1;
+  vm.currentTab = 2;
   vm.isActiveTab = function(tab_number) {
     return tab_number === vm.currentTab;
   };
@@ -34,7 +34,9 @@ angular.module('printo-app', []).controller('FormCtrl', function() {
   vm.itemParams = {
     sex: 'men',
     product_type: 'tshirt',
-    print_type: 'sublimation'
+    print_type: 'sublimation',
+    frontside_params: {},
+    backside_params: {}
   };
   vm.setSex = function(sex) {
     return vm.itemParams.sex = sex;
@@ -44,7 +46,23 @@ angular.module('printo-app', []).controller('FormCtrl', function() {
   };
   vm.setPrintType = function(print_type) {
     return vm.itemParams.print_type = print_type;
+
+    /*
+          IMAGE TAB
+     */
   };
+  vm.currentSide = 'frontside';
+  vm.predefinedColors = ['#000', '#ec008c', '#f00', '#f26521', '#fff200', '#177b2f', '#00bff3', '#a7a7a7', '#8c2424'];
+  vm.setBacksideColor = function(color) {
+    return vm.itemParams.backside_params.color = color;
+  };
+  vm.setFrontsideColor = function(color) {
+    return vm.itemParams.frontside_params.color = color;
+  };
+  vm.setSide = function(side) {
+    return vm.currentSide = side;
+  };
+  vm.spectrumOptions = {};
 });
 
 $('.tsd-print-type__block').click(function() {

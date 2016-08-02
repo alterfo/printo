@@ -1,20 +1,41 @@
-.tsd-image__tabs-menu {
-  
-  .tsd-image__tabs {
-    height: 60px;
-    line-height: 60px;
-    cursor: pointer;
-    
-    &--frontside {
-      border-right: $light-gray;
-    }
+//.tsd-image__tabs-menu {
+//
+//  .tsd-image__tabs {
+//    height: 60px;
+//    line-height: 60px;
+//    cursor: pointer;
+//
+//    &--frontside {
+//      border-right: $light-gray;
+//    }
+//
+//    &.selected {
+//      cursor: default;
+//      color: $menu-blue;
+//    }
+//  }
+//}
 
-    &.selected {
-      cursor: default;
-      color: $menu-blue;
-    }
+.tsd-side-chooser {
+  width: 270px;
+  padding-top: 10px;
+  height: 370px;
+  margin: 16px auto;
+  cursor: pointer;
+
+  &.selected {
+    outline: 2px solid $menu-blue;
+    cursor: default;
+  }
+
+  span {
+    display: inline-block;
+    width: 100%;
   }
 }
+
+
+
 
 .tsd-color-chooser {
   &__predefined-color-block {
@@ -35,6 +56,12 @@
       outline: 3px solid $gray;
     }
 
+  }
+  &__dropdown {
+    margin-top: 16px;
+    span {
+      margin-right: 16px;
+    }
   }
 }
 

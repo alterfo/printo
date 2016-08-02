@@ -444,24 +444,27 @@ th {
   .tsd-buttons .tsd-btn--disabled {
     background-color: #bbbcbe; }
 
-/* line 3, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
-.tsd-image__tabs-menu .tsd-image__tabs {
-  height: 60px;
-  line-height: 60px;
+/* line 19, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
+.tsd-side-chooser {
+  width: 270px;
+  padding-top: 10px;
+  height: 370px;
+  margin: 16px auto;
   cursor: pointer; }
-  /* line 8, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
-  .tsd-image__tabs-menu .tsd-image__tabs--frontside {
-    border-right: rgba(0, 0, 0, 0.21); }
-  /* line 12, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
-  .tsd-image__tabs-menu .tsd-image__tabs.selected {
-    cursor: default;
-    color: #14c3c9; }
+  /* line 26, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
+  .tsd-side-chooser.selected {
+    outline: 2px solid #14c3c9;
+    cursor: default; }
+  /* line 31, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
+  .tsd-side-chooser span {
+    display: inline-block;
+    width: 100%; }
 
-/* line 23, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
+/* line 44, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
 .tsd-color-chooser__predefined-color-list {
   display: inline-block; }
 
-/* line 26, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
+/* line 47, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
 .tsd-color-chooser__predefined-color-list-item {
   height: 16px;
   width: 16px;
@@ -469,16 +472,23 @@ th {
   padding: 0 3px;
   margin: 0 3px;
   cursor: pointer; }
-  /* line 34, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
+  /* line 55, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
   .tsd-color-chooser__predefined-color-list-item.selected {
     outline: 3px solid #bbbcbe; }
 
-/* line 44, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
+/* line 60, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
+.tsd-color-chooser__dropdown {
+  margin-top: 16px; }
+  /* line 62, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
+  .tsd-color-chooser__dropdown span {
+    margin-right: 16px; }
+
+/* line 71, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
 .tsd-image-uploader__form-input {
   height: 0;
   overflow: hidden; }
 
-/* line 49, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
+/* line 76, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
 .tsd-image-uploader__form-button {
   border: 2px dotted gray;
   border-radius: 5px;
@@ -488,7 +498,7 @@ th {
   text-align: center;
   display: inline-block;
   margin: 0 20px; }
-  /* line 59, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
+  /* line 86, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
   .tsd-image-uploader__form-button-image {
     background: url(../i/photo_upload_icon.png) center center no-repeat;
     margin-left: 10px;
@@ -498,7 +508,7 @@ th {
     position: relative;
     top: 1px; }
 
-/* line 70, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
+/* line 97, /Users/oleg/Sites/printo/printo/app/css/image-tab.scss */
 .tsd-image-uploader__hint {
   color: gray; }
 

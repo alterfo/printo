@@ -1,0 +1,26 @@
+.tsd-image-tabcontent
+    .tsd-color-chooser.tsd-grid
+        .tsd-col-1-2.tsd-color-chooser__predefined-color-block
+            span Выберите цвет:
+            ul.tsd-color-chooser__predefined-color-list
+              li.tsd-color-chooser__predefined-color-list-item(
+                ng-repeat="color in vm.predefinedColors",
+                style='background-color:{{color}}',
+                ng-click="vm.setBacksideColor(color)",
+                ng-class="{'selected': vm.itemParams.backside_params.color === color}")
+        .tsd-col-1-2.tsd-color-chooser__dropdown.tsd-text-right
+            span Другой цвет:
+            spectrum(ng-model="vm.itemParams.backside_params.color", options="spectrumOptions")
+    .tsd-image-uploader.tsd-grid
+        .tsd-col-1-2.tsd-image-uploader__form
+            span Добавить изображение:
+
+            .tsd-image-uploader__form-button
+                | Загрузить
+                span.tsd-image-uploader__form-button-image
+            .tsd-image-uploader__form-input
+                input(type="file", name="backside_image", id='backside_image')
+        .tsd-col-1-2.tsd-image-uploader__hint
+            | Разрешение изображения должно быть не менее
+            | 1000 на 1000 пикселей
+    include side-chooser.jade
