@@ -13,7 +13,7 @@ angular
       {id: 3, name: "3. Надпись"}
       {id: 4, name: "4. Результат"}
     ]
-    vm.currentTab = 2
+    vm.currentTab = 3
     vm.isActiveTab = (tab_number) ->
       tab_number is vm.currentTab
 
@@ -26,6 +26,12 @@ angular
       print_type: 'sublimation'
       frontside_params: {}
       backside_params: {}
+      frontText:
+        string: ''
+        fontFamily: ''
+      backText:
+        string: ''
+        fontFamily: ''
     }
 
     vm.setSex = (sex) ->
@@ -55,8 +61,17 @@ angular
       vm.currentSide = side
 
     vm.spectrumOptions = {
-
+#     config for color chooser
     }
 
+    ###
+              ТЕКСТ
+###
+
+    vm.fonts = [
+      {
+        name: 'Times New Roman'
+      }
+    ]
 
     return

@@ -24,7 +24,7 @@ angular.module('printo-app', ['ngSpectrum']).controller('FormCtrl', function() {
       name: "4. Результат"
     }
   ];
-  vm.currentTab = 2;
+  vm.currentTab = 3;
   vm.isActiveTab = function(tab_number) {
     return tab_number === vm.currentTab;
   };
@@ -36,7 +36,15 @@ angular.module('printo-app', ['ngSpectrum']).controller('FormCtrl', function() {
     product_type: 'tshirt',
     print_type: 'sublimation',
     frontside_params: {},
-    backside_params: {}
+    backside_params: {},
+    frontText: {
+      string: '',
+      fontFamily: ''
+    },
+    backText: {
+      string: '',
+      fontFamily: ''
+    }
   };
   vm.setSex = function(sex) {
     return vm.itemParams.sex = sex;
@@ -63,6 +71,15 @@ angular.module('printo-app', ['ngSpectrum']).controller('FormCtrl', function() {
     return vm.currentSide = side;
   };
   vm.spectrumOptions = {};
+
+  /*
+            ТЕКСТ
+   */
+  vm.fonts = [
+    {
+      name: 'Times New Roman'
+    }
+  ];
 });
 
 $('.tsd-print-type__block').click(function() {
@@ -73,20 +90,8 @@ $('.tsd-print-type__block').click(function() {
   sex = $(this).attr('data-tsd-printtype');
 });
 
-$('.tsd-sex-btn').click(function() {
-  var sex;
-  $('.tsd-sex-btn').removeClass('selected');
-  $(this).addClass('selected');
-  updateCanvasImage();
-  sex = $(this).attr('data-tsd-sex');
-});
 
 
 
-$('.tsd-type-btn').click(function() {
-  var type;
-  $('.tsd-type-btn').removeClass('selected');
-  $(this).addClass('selected');
-  updateCanvasImage();
-  type = $(this).attr('data-tsd-type');
-});
+
+

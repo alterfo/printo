@@ -1,0 +1,5 @@
+.tsd-step-block(ng-show="vm.currentTab === 3")
+    .tsd-image__tabcontent.tsd-image__tabcontent--frontside(ng-show="vm.currentSide==='frontside'")
+        include frontside-text
+    .tsd-image__tabcontent.tsd-image__tabcontent--backside(ng-show="vm.currentSide==='backside'")
+        include backside-text
