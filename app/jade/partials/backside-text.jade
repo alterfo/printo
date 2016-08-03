@@ -1,7 +1,21 @@
 .tsd-text-tabcontent
     .tsd-text.tsd-grid
-        .tsd-col-1-4
-            div.tsc-text__textarea-label Добавить текст:
-        .tsd-col-3-4
-            textarea.tsd-text__textarea(ng-model="vm.itemParams.backText.string")
+        div.tsd-text__textarea-label Добавить текст:
+        textarea.tsd-text__textarea(ng-model="vm.itemParams.backText.string")
+    .tsd-format.tsd-grid
+        .tsd-col-1-3
+            p Выбрать шрифт:
+                select.tsd-format__select(ng-model="vm.itemParams.backText.fontFamily")
+                    option(ng-repeat="font in vm.fonts")
+                        | {{font.name}}
+        .tsd-col-1-3.tsd-text-center
+            p Выбрать цвет:
+                span.tsd-format__color
+                    spectrum(ng-model="vm.itemParams.backText.color", options="vm.spectrumOptions")
+
+        .tsd-col-1-3.tsd-text-right
+            p Выбрать размер:
+                select.tsd-format__select(ng-model="vm.itemParams.backText.size", convert-to-number)
+                    option(ng-repeat="size in [12, 14, 16, 18, 24, 32, 48, 72]")
+                        | {{size}}
     include side-chooser.jade

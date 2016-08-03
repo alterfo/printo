@@ -1,8 +1,25 @@
 angular
   .module('printo-app', ['ngSpectrum'])
+  .filter 'range', ->
+    (input, total) ->
+      total = parseInt(total)
+      i = 0
+      while i < total
+        input.push i
+        i++
+      input
+  .directive 'convertToNumber', ->
+    {
+    require: 'ngModel'
+    link: (scope, element, attrs, ngModel) ->
+      ngModel.$parsers.push (val) ->
+        parseInt val, 10
+      ngModel.$formatters.push (val) ->
+        '' + val
+      return
 
-
-  .controller 'FormCtrl', ->
+    }
+  .controller 'FormCtrl', ($scope)->
     vm = @
     ###
             TABS
@@ -28,10 +45,43 @@ angular
       backside_params: {}
       frontText:
         string: ''
-        fontFamily: ''
+        fontFamily: 'Times New Roman'
+        color: ''
+        size: 12
+        format: [
+          {
+            name: 'bold'
+          }
+          {
+            name: 'italic'
+          }
+          {
+            name: 'justT'
+          }
+          {
+            name: 'TT'
+          }
+          {
+            name: 'smallTT'
+          }
+          {
+            name: "right"
+          }
+          {
+            name: "center"
+          }
+          {
+            name: "left"
+          }
+        ]
       backText:
         string: ''
-        fontFamily: ''
+        fontFamily: 'Times New Roman'
+        color: ''
+        size: 12
+        format:
+          bold: false
+          italic: false
     }
 
     vm.setSex = (sex) ->
@@ -74,4 +124,12 @@ angular
       }
     ]
 
+    vm.selectFormatter = (formatter) ->
+      formatter.selected = !formatter.selected
+
+    vm.formatterClass = (fname) ->
+      if fname.selected
+        'selected tsd-formatter__' + fname
+      else
+        'tsd-formatter__' + fname
     return

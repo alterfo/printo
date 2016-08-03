@@ -1,17 +1,62 @@
 .tsd-text {
 
+
   &-tabcontent {
     margin-top: 20px;
   }
 
-  .tsd-text__textarea {
+  &__textarea {
     vertical-align: top;
     margin-left: 20px;
-    width: 500px;
+    width: 590px;
+    float: right;
+
+    &-label {
+      width: 140px;
+      float: left;
+    }
   }
 
   .tsc-text__textarea-label {
-    padding-bottom: 100px;
-    text-align: right;
   }
 }
+
+.tsd-format {
+
+
+  &__select {
+    display: inline-block;
+    width: 100px;
+    margin-left: 20px;
+  }
+  &__color {
+    display: inline-block;
+    padding-left: 20px;
+  }
+}
+
+$formatters: "bold", "italic", "justT", "TT", "smallTT", "left", "center", "right";
+
+.tsd-formatter {
+  display: inline-block;
+  width: 30px;
+  height: 28px;
+  background-image: url('../i/formatter_sprite.png');
+  cursor: pointer;
+
+
+  @function get_media($list, $number) {
+    @return nth($list, $number);
+  }
+  @for $i from 1 through length($formatters) {
+    &__#{get_media($formatters, $i)} {
+      background-position: (($i - 1) * -37#{px}) 0;
+      &.selected {
+        background-position: (($i - 1) * -37#{px}) -32px;
+
+      }
+    }
+  }
+}
+
+

@@ -2,7 +2,30 @@
 
 
 
-angular.module('printo-app', ['ngSpectrum']).controller('FormCtrl', function() {
+angular.module('printo-app', ['ngSpectrum']).filter('range', function() {
+  return function(input, total) {
+    var i;
+    total = parseInt(total);
+    i = 0;
+    while (i < total) {
+      input.push(i);
+      i++;
+    }
+    return input;
+  };
+}).directive('convertToNumber', function() {
+  return {
+    require: 'ngModel',
+    link: function(scope, element, attrs, ngModel) {
+      ngModel.$parsers.push(function(val) {
+        return parseInt(val, 10);
+      });
+      ngModel.$formatters.push(function(val) {
+        return '' + val;
+      });
+    }
+  };
+}).controller('FormCtrl', function($scope) {
   var vm;
   vm = this;
 
@@ -39,11 +62,38 @@ angular.module('printo-app', ['ngSpectrum']).controller('FormCtrl', function() {
     backside_params: {},
     frontText: {
       string: '',
-      fontFamily: ''
+      fontFamily: 'Times New Roman',
+      color: '',
+      size: 12,
+      format: [
+        {
+          name: 'bold'
+        }, {
+          name: 'italic'
+        }, {
+          name: 'justT'
+        }, {
+          name: 'TT'
+        }, {
+          name: 'smallTT'
+        }, {
+          name: "right"
+        }, {
+          name: "center"
+        }, {
+          name: "left"
+        }
+      ]
     },
     backText: {
       string: '',
-      fontFamily: ''
+      fontFamily: 'Times New Roman',
+      color: '',
+      size: 12,
+      format: {
+        bold: false,
+        italic: false
+      }
     }
   };
   vm.setSex = function(sex) {
@@ -80,6 +130,16 @@ angular.module('printo-app', ['ngSpectrum']).controller('FormCtrl', function() {
       name: 'Times New Roman'
     }
   ];
+  vm.selectFormatter = function(formatter) {
+    return formatter.selected = !formatter.selected;
+  };
+  vm.formatterClass = function(fname) {
+    if (fname.selected) {
+      return 'selected tsd-formatter__' + fname;
+    } else {
+      return 'tsd-formatter__' + fname;
+    }
+  };
 });
 
 $('.tsd-print-type__block').click(function() {
