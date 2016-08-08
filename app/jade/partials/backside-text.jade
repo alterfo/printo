@@ -18,4 +18,9 @@
                 select.tsd-format__select(ng-model="vm.itemParams.backText.size", convert-to-number)
                     option(ng-repeat="size in [12, 14, 16, 18, 24, 32, 48, 72]")
                         | {{size}}
+    .tsd-formatter-container
+        i.tsd-formatter(
+        ng-repeat="f in vm.itemParams.backText.format",
+        ng-class="{'selected':f.selected, '{{vm.formatterClass(f.name)}}': true}",
+        ng-click="vm.selectFormatter(vm.itemParams.backText.format[$index])")
     include side-chooser.jade

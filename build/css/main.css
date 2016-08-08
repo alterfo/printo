@@ -558,41 +558,23 @@ th {
     .tsd-formatter__italic.selected {
       background-position: -37px -32px; }
   /* line 52, /Users/oleg/Sites/printo/printo/app/css/text.scss */
-  .tsd-formatter__justT {
+  .tsd-formatter__left {
     background-position: -74px 0; }
     /* line 54, /Users/oleg/Sites/printo/printo/app/css/text.scss */
-    .tsd-formatter__justT.selected {
+    .tsd-formatter__left.selected {
       background-position: -74px -32px; }
   /* line 52, /Users/oleg/Sites/printo/printo/app/css/text.scss */
-  .tsd-formatter__TT {
+  .tsd-formatter__center {
     background-position: -111px 0; }
     /* line 54, /Users/oleg/Sites/printo/printo/app/css/text.scss */
-    .tsd-formatter__TT.selected {
+    .tsd-formatter__center.selected {
       background-position: -111px -32px; }
   /* line 52, /Users/oleg/Sites/printo/printo/app/css/text.scss */
-  .tsd-formatter__smallTT {
+  .tsd-formatter__right {
     background-position: -148px 0; }
     /* line 54, /Users/oleg/Sites/printo/printo/app/css/text.scss */
-    .tsd-formatter__smallTT.selected {
-      background-position: -148px -32px; }
-  /* line 52, /Users/oleg/Sites/printo/printo/app/css/text.scss */
-  .tsd-formatter__left {
-    background-position: -185px 0; }
-    /* line 54, /Users/oleg/Sites/printo/printo/app/css/text.scss */
-    .tsd-formatter__left.selected {
-      background-position: -185px -32px; }
-  /* line 52, /Users/oleg/Sites/printo/printo/app/css/text.scss */
-  .tsd-formatter__center {
-    background-position: -222px 0; }
-    /* line 54, /Users/oleg/Sites/printo/printo/app/css/text.scss */
-    .tsd-formatter__center.selected {
-      background-position: -222px -32px; }
-  /* line 52, /Users/oleg/Sites/printo/printo/app/css/text.scss */
-  .tsd-formatter__right {
-    background-position: -259px 0; }
-    /* line 54, /Users/oleg/Sites/printo/printo/app/css/text.scss */
     .tsd-formatter__right.selected {
-      background-position: -259px -32px; }
+      background-position: -148px -32px; }
 
 /* line 13, /Users/oleg/Sites/printo/printo/app/css/main.scss */
 body {

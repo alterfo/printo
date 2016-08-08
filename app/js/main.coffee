@@ -56,15 +56,6 @@ angular
             name: 'italic'
           }
           {
-            name: 'justT'
-          }
-          {
-            name: 'TT'
-          }
-          {
-            name: 'smallTT'
-          }
-          {
             name: "right"
           }
           {
@@ -79,9 +70,23 @@ angular
         fontFamily: 'Times New Roman'
         color: ''
         size: 12
-        format:
-          bold: false
-          italic: false
+        format: [
+          {
+            name: 'bold'
+          }
+          {
+            name: 'italic'
+          }
+          {
+            name: "right"
+          }
+          {
+            name: "center"
+          }
+          {
+            name: "left"
+          }
+        ]
     }
 
     vm.setSex = (sex) ->
